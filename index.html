@@ -30,14 +30,18 @@
         data: {
           datasets: [{
             label: 'wu',
-            data: rowData
+            data: rowData,
+            borderColor: 'rgba(0,0,0,1)',
+            pointBorderColor: 'rgba(0,0,0,1)',
+            pointBackgroundColor: 'rgba(0,0,0,1)'
           }]
         },
         options: {
           responsive: true,
           title: {
             display: true,
-            text: "魔導杯・魔轟三鉄傑"
+            text: "魔道杯・魔轟三鉄傑 累計Pt推移",
+            fontSize: 40
           },
           scales: {
             xAxes: [{
@@ -45,11 +49,28 @@
               display: true,
               scaleLabel: {
                 display: true,
-                labelString: 'Date'
-              }//,
-              // time: {
-              //   // unit: TimeUnit.day
-              // }
+                labelString: 'Date',
+                fontSize: 20
+              },
+              ticks: {
+                fontSize: 16
+              },
+              time: {
+                unit: 'day',
+                min: moment('2017-01-20T16:00').toDate(),
+                max: moment('2017-01-23T16:00').toDate(),
+                displayFormats: {
+                  day: 'MM-DD HH:mm'
+                }
+              }
+            }],
+            yAxes: [{
+              type: 'linear',
+              display: true,
+              ticks: {
+                beginAtZero: true,
+                fontSize: 16
+              }
             }]
           }
         }

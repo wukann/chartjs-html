@@ -5,7 +5,7 @@
   "repository": {},
   "license": "MIT",
   "scripts": {
-    "start": "lite-server -port 10001"
+    "start": "lite-server"
   },
   "devDependencies": {
     "@types/chart.js": "^0.0.12",
